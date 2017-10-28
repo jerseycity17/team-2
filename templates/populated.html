@@ -181,7 +181,10 @@ $('#textarea1').val('New Text');
         </div>
           
       </div>
-        <input type="submit" value="Submit"> 
+        <!--<input type="submit" value="Submit">--> 
+       <div class="col">
+	        			<a class="waves-effect #1565c0 blue darken-3 btn" onclick="submit()">Submit</a>
+	        		</div>
     </form>
   </div>
          
@@ -194,6 +197,11 @@ $('#textarea1').val('New Text');
     </div>    
     
 </body>
+    <script>
+ function linkToForm() {
+     document.getElementById("iframe").src = "{{ url_for('profilegendisplaywithedit') }}"
+}
+    </script>
    
     
 </html>

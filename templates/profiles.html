@@ -34,12 +34,12 @@
 	        		</div>
 	        	</div>
 	        	<div class="row"> 
-	        		<h5 style="text-align:center" id="fam1">Family 1</h5>
+	        		<h5 style="text-align:center" id="fam1"> Weber</h5>
 	        		<div class="col">
-	        			<a class="waves-effect #1565c0 blue darken-3 btn" onclick="goToFamily()">Select</a>
+	        			<a class="waves-effect #1565c0 blue darken-3 btn" onclick="goToFamily1()">Select</a>
 	        		</div>
 	        		<div class="col">
-	        			<a class="waves-effect #1565c0 blue darken-3 btn" id="edit1">Edit</a>
+	        			<a class="waves-effect #1565c0 blue darken-3 btn" onclick="edit1()">Edit</a>
 	        		</div>
 	        		<div class="col">
 	        			<a class="waves-effect #1565c0 blue darken-3 btn" onclick="UserAction()">SMS</a>
@@ -124,6 +124,13 @@
 function goToFamily() {
 	document.getElementById("iframe").src = "{{ url_for('profiledisplay') }}"
 }
+    function goToFamily1() {
+	document.getElementById("iframe").src = "{{ url_for('profilegendisplay') }}"
+}
+    function edit1() {
+	document.getElementById("iframe").src = "{{ url_for('populated') }}"
+}
+    
 function hello() {
 	alert("You haven't talked to Family 1 in a while! Send them a message!")
 }
