@@ -41,7 +41,7 @@
 	        			<a class="waves-effect #1565c0 blue darken-3 btn" onclick="goToFamily()">Select</a>
 	        		</div>
 	        		<div class="col">
-	        			<a class="waves-effect #1565c0 blue darken-3 btn" id="edit1">Edit</a>
+	        			<a class="waves-effect #1565c0 blue darken-3 btn" id="edit1" onclick="edit1()">Edit</a>
 	        		</div>
 	        		<div class="col">
 	        			<a class="waves-effect #1565c0 blue darken-3 btn" onclick="UserAction()">SMS</a>
@@ -131,7 +131,12 @@ function goToFamily() {
 function hello() {
 	alert("You haven't talked to Family 1 in a while! Send them a message!")
 }
-setTimeout(hello(), 50000)
+
+function edit1() {
+  document.getElementById("iframe").src = "{{ url_for('populated') }}"
+}
+setTimeout(hello(), 10000)
+
 function UserAction() {
     console.log('test from profiles.html');
     var xhttp = new XMLHttpRequest();

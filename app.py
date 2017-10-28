@@ -35,7 +35,9 @@ def profileform():
 @app.route('/profiledisplay')
 def profiledisplay():
     return render_template('profiledisplay.html')
-
+@app.route('/populated')
+def populated():
+    return render_template('populated.html')
 @app.route('/getFamilyData',methods=['POST'])
 def getFamData():
     print('hi')
