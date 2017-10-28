@@ -2,13 +2,13 @@ from flask import json,Flask,render_template,request,jsonify
 from twilio.twiml.messaging_response import MessagingResponse, Message
 import dbfunctions
 import sqlite3
-<<<<<<< Updated upstream
+
 from flask_cors import CORS
 from twilio.rest import Client
-=======
+
 import datetime
 #from twilio.rest import Client
->>>>>>> Stashed changes
+
 #from twilio import twiml
 #import message_maker
 # Your Account SID from twilio.com/console
