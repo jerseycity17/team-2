@@ -21,6 +21,12 @@ def profiles():
 @app.route('/login')
 def login():
     return render_template('login.html')
+@app.route('/profileform')
+def profileform():
+    return render_template('profileform.html')
+@app.route('/profiledisplay')
+def profiledisplay():
+    return render_template('profiledisplay.html')
 
 @app.route('/sms', methods=['POST'])
 def text():
