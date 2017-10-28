@@ -17,14 +17,31 @@
   font-weight: bold;
 }
 
+.bord{
+  border: 3px solid black;
+}
+
 </style>
 </head>
-<body>
+<body class="grey lighten-5">
+
+<!-- Nav bar -->
+<nav class="blue darken-3">
+  <div class="nav-wrapper">
+    <a href="3" class="brand-logo right" id="logoFont">Family Promise</a>
+    <ul id="nav-mobile" class="left hide-on-med-and-down">
+      <li><a href="/login">Home</a></li>
+    </ul>
+  </div>
+</nav>
+
+
   <div class="container">
       <div class="row">
-          <div class="col m6">
+          <div class="col s6">
               <h2 class="center-align">Regional Directors</h2>
               <br>
+              <div class="bord">
               <p class="dirName">Jeanna Beck</p>
                 <p>(MI, IL, IN, OH, KY, TN, VA, NC, SC, WY, UT, CO, Northern GA)
                 <br>(317) 318-3646</p>
@@ -37,9 +54,12 @@
               <p class="dirName">Teressa Ramsey</p>
                 <p>(MN, WI, IA, KS, MO, AZ, NM, TX, OK, AR, LA, MS, AL, FL, HI, Southern GA)
                 <br>(251) 979-1496</p>
+              </div>
           </div>
-          <div class="col m6">
+          <div class="col s6">
               <h2 class="center-align">Login</h2>
+              <br>
+              <div class="bord">
               <div class="row">
                   <form class="col s12">
                       <div class="row">
@@ -72,6 +92,7 @@
                       </div>
                   </form>
               </div>
+            </div>
           </div>
       </div>
   </div>
