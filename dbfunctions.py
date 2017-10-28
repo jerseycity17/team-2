@@ -80,5 +80,5 @@ def main():
         print("Query Families by ID")
         load_family(conn, 1)
 
-#main()
+main()
 
