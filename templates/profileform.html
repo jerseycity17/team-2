@@ -39,8 +39,7 @@ $('#textarea1').val('New Text');
 <nav class="blue darken-3">
   <div class="nav-wrapper">
     <ul id="nav-mobile" class="left hide-on-med-and-down">
-      <li><a href="/">Home</a></li>
-      <li><a href="/profile">Profile</a></li>
+
         
       <li><a href="/profilemessage">Messages</a></li>
     </ul>
@@ -77,48 +76,41 @@ $('#textarea1').val('New Text');
           <input id="icon_email" type="email"  name = "email" class="validate">
           <label for="icon_email">Email</label>
         </div>
-          <div class="input-field col s12">
-           <i class="material-icons prefix">address</i>
-          <textarea id="textarea1" class="materialize-textarea" name = "address"></textarea>
-          <label for="textarea1">Address </label>
-<p>
-      <input class="with-gap" name="group2" type="radio" id="group2test1"  />
+        <div class="input-field col s12">
+          <i class="material-icons prefix">location</i>
+          <input id="icon_prefix" type="text" name = "address" class="validate">
+          <label for="icon_prefix">Address</label>
+        </div>
+     <h4> Employment Status </h4>
+     <p>
+      <input name="group2" type="radio" id="group2test1"  />
       <label for="group2test1">Self-Employed</label>
     </p>
     <p>
-      <input class="with-gap" name="group2" type="radio" id="group2test2"  />
+      <input name="group2" type="radio" id="group2test2"  />
       <label for="group2test2">Employed</label>
     </p>
     <p>
-      <input class="with-gap" name="group2" type="radio" id="group2test3"  />
-      <label for="group2test3">UnEmployed</label>
+      <input name="group2" type="radio" id="group2test3"  />
+      <label for="group2test3">Unemployed</label>
     </p>
     <p>
-      <input class="with-gap" name="group2" type="radio" id="group2test4"  />
+      <input name="group2" type="radio" id="group2test4"  />
       <label for="group2test4">Not in the workforce</label>
     </p>
            <br>
-        </div>
-           <div class="input-field col s12">
-              <select>
-                <option value="" disabled selected>Choose your option</option>
-                <option value="1">Self-Employed</option>
-                <option value="2">Employed</option>
-                <option value="3">Unemployed</option>
-              </select>
-         
-<!--     <input type="submit" name="submit" value="Get Selected Values" />
- -->  </div>
-        
+       
+<h4> Shelter Status </h4>       
     <p>
-      <input class="with-gap" name="group1" type="radio" id="test1"  />
+      <input name="group1" type="radio" id="test1"  />
       <label for="test1">Currently in need of shelter</label>
     </p>
     <p>
-      <input class="with-gap" name="group1" type="radio" id="test2"  />
+      <input name="group1" type="radio" id="test2"  />
       <label for="test2">Currently own a house</label>
     </p>
 <br>
+</div>
           <h4>Family Info *Optional*</h4>
          <div class="input-field col s6">
           <input id="icon_prefix" type="text" name= "family1">
