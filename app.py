@@ -29,6 +29,10 @@ def profileform():
 @app.route('/profiledisplay')
 def profiledisplay():
     return render_template('profiledisplay.html')
+
+@app.route('/profilegendisplay')
+def profiledisplay():
+    return render_template('profilegendisplay.html')
 @app.route('/populated')
 def populated():
     return render_template('populated.html')
@@ -40,6 +44,10 @@ def getFamData():
     number=request.form['number']
     print(number)
     return render_template('success.html')
+@app.route('/profilegendisplaywithedit')
+def profiledisplay():
+    return render_template('profilegendisplaywithedit.html')
+
 @app.route('/sms', methods=['POST'])
 def text():
     print('received')
