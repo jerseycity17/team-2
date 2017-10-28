@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="{{ url_for('static',filename='css/materialize.css')}}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{{ url_for('static',filename='css/home.css')}}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Macondo|Lato|Indie+Flower|Shadows+Into+Light|Ruda|Source+Sans+Pro" rel="stylesheet">
+
+<style>
+
+.dirName {
+  font-weight: bold;
+}
+
+</style>
+</head>
+<body>
+  <div class="container">
+      <div class="row">
+          <div class="col m6">
+              <h2 class="center-align">Regional Directors</h2>
+              <br>
+              <p class="dirName">Jeanna Beck</p>
+                <p>(MI, IL, IN, OH, KY, TN, VA, NC, SC, WY, UT, CO, Northern GA)
+                <br>(317) 318-3646</p>
+              <p class="dirName">Angelica Johnson</p>
+                <p>(ME, NH, MA, CT, NY, PA, NJ, MD, DE, NV)
+                <br>(908) 273-1100, ext. 20</p>
+              <p class="dirName">Stacy Pollard</p>
+                <p>(WA, OR, CA, ID, MT, AK)
+                <br>(971) 506-3724</p>
+              <p class="dirName">Teressa Ramsey</p>
+                <p>(MN, WI, IA, KS, MO, AZ, NM, TX, OK, AR, LA, MS, AL, FL, HI, Southern GA)
+                <br>(251) 979-1496</p>
+          </div>
+          <div class="col m6">
+              <h2 class="center-align">Login</h2>
+              <div class="row">
+                  <form class="col s12">
+                      <div class="row">
+                          <div class="input-field col s12">
+                              <input id="email" type="email" class="validate">
+                              <label for="email">Email</label>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="input-field col s12">
+                              <input id="pass" type="password" class="validate">
+                              <label for="pass">Password</label>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col s12">
+                              <p>
+                                  <input type="checkbox" id="remember">
+                                  <label for="remember">Remember me</label>
+                              </p>
+                          </div>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="row">
+                          <div class="col m12">
+                              <p class="center-align">
+                                  <button class="btn btn-large waves-effect waves-light" type="button" name="action">Login</button>
+                              </p>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</body>
+
+
+
+</html>
