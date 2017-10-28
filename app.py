@@ -1,5 +1,7 @@
 from flask import json,Flask,render_template,request,jsonify
 from twilio.twiml.messaging_response import MessagingResponse, Message
+import test
+import sqlite3
 #from twilio.rest import Client
 #from twilio import twiml
 #import message_maker
@@ -28,6 +30,13 @@ def profileform():
 def profiledisplay():
     return render_template('profiledisplay.html')
 
+@app.route('/getFamilyData',methods=['POST'])
+def getFamData():
+    print('hi')
+    name=request.form['name']
+    number=request.form['number']
+    print(number)
+    return render_template('success.html')
 @app.route('/sms', methods=['POST'])
 def text():
     print('received')
@@ -39,4 +48,9 @@ def text():
     response.message('hi, aaron')
     print('hi')
     return str(response)
+
+@app.route('/send_data' methods = ['POST'])
+def send_data():
+    projectpath=request.form['projectFilepath']
+    conn = test.create_connection('database.db')
 
