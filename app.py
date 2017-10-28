@@ -2,13 +2,8 @@ from flask import json,Flask,render_template,request,jsonify
 from twilio.twiml.messaging_response import MessagingResponse, Message
 import dbfunctions
 import sqlite3
-
 from flask_cors import CORS
 from twilio.rest import Client
-
-import datetime
-#from twilio.rest import Client
-
 #from twilio import twiml
 #import message_maker
 # Your Account SID from twilio.com/console
@@ -35,28 +30,17 @@ def profileform():
 @app.route('/profiledisplay')
 def profiledisplay():
     return render_template('profiledisplay.html')
+@app.route('/populated')
+def populated():
+    return render_template('populated.html')
 
 @app.route('/getFamilyData',methods=['POST'])
 def getFamData():
     print('hi')
     name=request.form['name']
-    email=request.form['email']
-    address=request.form['address']
     number=request.form['number']
-    employed=request.form['group2']
-    homestatus=request.form['group1']
-    contact=request.form['phonechecked']
-    lastcontact=datetime.date.today
-    info=request.form['additionalinfo']
-
-    family = (1,name,email,number,101,'','','','','',info)
-
-    conn = dbfunctions.create_connection('database.db')
-    with conn:
-        dbfunctions.insert_family(conn, family)
-
     print(number)
-    return 'You successfully submitted the form'
+    return render_template('success.html')
 @app.route('/sms', methods=['POST'])
 def text():
     print('received')
@@ -87,4 +71,3 @@ def msg2():
         body="Financial Literacy Workshop! Come join",
         from_="+19193283003",)
     return message
-
