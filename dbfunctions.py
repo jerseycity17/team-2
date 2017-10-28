@@ -59,6 +59,7 @@ def delete_family(conn, fam_id):
             FROM Families
             WHERE FamilyID = ?''', (fam_id,))
 
+    #testing
 def main():
     database = 'database.db'
     family = (1, 'aName', 'email@email', "123-4567", 100, 'Employed', 'No Home', '', 'TEXT', '2017-10-28', '')
@@ -80,5 +81,5 @@ def main():
         print("Query Families by ID")
         load_family(conn, 1)
 
-main()
+#main()
 
