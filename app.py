@@ -1,6 +1,6 @@
-from flask import Flask
+from flask import json,Flask,render_template,request,jsonify
 app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'Welcome to family connect'
+    return render_template('home.html')

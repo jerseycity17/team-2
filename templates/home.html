@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="{{ url_for('static',filename='css/materialize.css')}}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{{ url_for('static',filename='css/home.css')}}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Macondo|Lato|Indie+Flower|Shadows+Into+Light|Ruda|Source+Sans+Pro" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
+  <script src="https://chadkillingsworth.github.io/geolocation-marker/geolocation-marker.js"></script>
+  <script src="{{ url_for('static',filename='js/materialize.js')}}"></script>
+  <script src="{{ url_for('static',filename='js/map.js')}}"></script>
+  <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+
+<style>
+input[type=text]{
+  width: 75%;
+  border: 2px solid;
+  font-size: 32px;
+  color: black;
+}
+.container-1 input#search{
+  width: 75%;
+  height: 50px;
+  border: 2px solid #1b5e20;
+  font-size: 24px;
+  float: left;
+  color: black;
+  padding-left: 20px;
+  border-radius: 5px;
+}
+input::placeholder {
+  color: black;
+  font-size: 18px;
+}
+
+h3{
+  font-size: 35px;
+}
+p{
+  font-size: 24px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-gap: 10px;
+  background-color: #fff;
+  color: #444;
+}
+.box {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+}
+
+.separator{
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+}
+.material-icons{
+  font-size: 30px;
+}
+
+.transparentBox{
+  background-color: grey;
+  background: rgba(128, 128, 128, 0.6);
+}
+
+#mapStuff{
+  background-color: white;
+  border-style: groove;
+}
+#head{
+  text-align: center;
+  background-color: #2e7d32;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  color: white;
+}
+#logoFont{
+  font-family: 'Shadows Into Light';
+  padding-right: 10px;
+}
+#lowerText{
+  margin-top: 145px;
+}
+#rightText{
+  margin-top: 80px;
+}
+
+</style>
+</head>
+
+<body class="blue-grey lighten-5">
+Hello World!
+</body>
+</html>
