@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -13,20 +12,48 @@
 </head>
 <body>
 
-<div class="row">
-      <div class="col s1">1</div>
-      <div class="col s1">2</div>
-      <div class="col s1">3</div>
-      <div class="col s1">4</div>
-      <div class="col s1">5</div>
-      <div class="col s1">6</div>
-      <div class="col s1">7</div>
-      <div class="col s1">8</div>
-      <div class="col s1">9</div>
-      <div class="col s1">10</div>
-      <div class="col s1">11</div>
-      <div class="col s1">12</div>
+    <!-- Title -->
+    <div class="card-panel teal lighten-2">This is a card panel with a teal lighten-2 class</div>
+
+    <!-- Page Layout -->
+    <div class="row">
+
+	    <div class="col s3 m4 l3 teal lighten-2">
+	        <div class="container">
+	        	<div class="row"> 
+	        		<p id="first">Family 1</p>
+	        		<a class="waves-effect waves-light btn" onclick="clicked()">Edit</a>
+	        	</div>
+	        	<div class="row">
+	        		<p>Family 2</p>
+	        		<a class="waves-effect waves-light btn" id="taco">Edit</a>
+	        	</div>
+	        </div>
+	    </div>
+
+      <div class="col s9 m8 l9 #bdbdbd grey">
+        <div class="container">
+        	<p>Family Info</p>
+        	<p>Family Info</p>
+        	<p>Family Info</p>
+        	<p>Family Info</p>
+        	<p>Family Info</p>
+        	<p>Family Info</p>
+        	<p>Family Info</p>
+        	<p>Family Info</p>
+        	<p>Family Info</p>
+        	<p>Family Info</p>
+        </div>
+      </div>
+
     </div>
 
+<!-- Javascript -->
+<script>
+ function clicked() {
+    document.getElementById("first").innerHTML = "changed.";
+}
+</script>
 </body>
 </html>
+
