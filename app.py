@@ -28,6 +28,13 @@ def profileform():
 def profiledisplay():
     return render_template('profiledisplay.html')
 
+@app.route('/getFamilyData',methods=['POST'])
+def getFamData():
+    print('hi')
+    name=request.form['name']
+    number=request.form['number']
+    print(number)
+    return render_template('success.html')
 @app.route('/sms', methods=['POST'])
 def text():
     print('received')
