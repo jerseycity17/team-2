@@ -59,8 +59,8 @@ $('#textarea1').val('New Text');
     
       <div class="col s6">
          <div class="row">
-    <form class="col s12" action="action_page.php" method ="post">
-      
+    <form class="col s12" method ="post">
+
       <div class="row">
         <div class="input-field col s12">
           <i class="material-icons prefix">account_circle</i>
@@ -70,7 +70,7 @@ $('#textarea1').val('New Text');
           <br>
         <div class="input-field col s6">
           <i class="material-icons prefix">phone</i>
-          <input id="icon_telephone" type="tel" name= "number" class="validate">
+          <input id="icon_telephone" type="tel" name= "number" class="validate>">
           <label for="icon_telephone">Telephone</label>
         </div>
           <div class="input-field col s6">
@@ -82,16 +82,38 @@ $('#textarea1').val('New Text');
            <i class="material-icons prefix">address</i>
           <textarea id="textarea1" class="materialize-textarea" name = "address"></textarea>
           <label for="textarea1">Address </label>
+
+          <form action="#">
+          <p>
+            <input class="with-gap" name="group2" type="radio" id="test1"  />
+            <label for="test1">Self-Employed</label>
+          </p>
+          <p>
+            <input class="with-gap" name="group2" type="radio" id="test2"  />
+            <label for="test2">Employed</label>
+          </p>
+          <p>
+            <input class="with-gap" name="group2" type="radio" id="test3"  />
+            <label for="test2">UnEmployed</label>
+          </p>
+          <p>
+            <input class="with-gap" name="group2" type="radio" id="test4"  />
+            <label for="test2">Not in the workforce</label>
+          </p>
+          </form>
+            <br>
         </div>
            <div class="input-field col s12">
-    <select name =status >
-      <option value="" disabled selected>Choose your option</option>
-      <option value="1">Self-Employed</option>
-      <option value="2">Employed</option>
-      <option value="3">Unemployed</option>
-    </select>
-    <input type="submit" name="submit" value="Get Selected Values" />
-  </div>
+            <form>
+              <select>
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">Self-Employed</option>
+                <option value="2">Employed</option>
+                <option value="3">Unemployed</option>
+              </select>
+            </form>
+<!--     <input type="submit" name="submit" value="Get Selected Values" />
+ -->  </div>
           <form action="#">
     <p>
       <input class="with-gap" name="group1" type="radio" id="test1"  />
@@ -148,7 +170,7 @@ $('#textarea1').val('New Text');
                   </div>
           </form>
          <br>
-          <br>
+        <br>
           
       <div class="input-field col s12">
            <i class="material-icons prefix">mode_edit</i>
@@ -157,7 +179,7 @@ $('#textarea1').val('New Text');
         </div>
           
       </div>
-        <input type="submit" value="Submit" onclick="othername();"> 
+        <input type="submit" value="Submit"> 
     </form>
   </div>
          
