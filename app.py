@@ -31,7 +31,7 @@ def profiledisplay():
     return render_template('profiledisplay.html')
 
 @app.route('/profilegendisplay')
-def profiledisplay():
+def profilegendisplay():
     return render_template('profilegendisplay.html')
 @app.route('/populated')
 def populated():
@@ -45,7 +45,7 @@ def getFamData():
     print(number)
     return render_template('success.html')
 @app.route('/profilegendisplaywithedit')
-def profiledisplay():
+def profilegendisplayedit():
     return render_template('profilegendisplaywithedit.html')
 
 @app.route('/sms', methods=['POST'])
