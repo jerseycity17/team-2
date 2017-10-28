@@ -12,21 +12,16 @@ import datetime
 #from twilio import twiml
 #import message_maker
 # Your Account SID from twilio.com/console
-account_sid = ""
+account_sid = "A"
 # Your Auth Token from twilio.com/console
-auth_token  = ""
+auth_token  = "8"
 
 app = Flask(__name__)
 CORS(app)
-@app.route('/')
-def hello_world():
-    return render_template('home.html')
-
-
 @app.route('/profiles')
 def profiles():
     return render_template('profiles.html')
-@app.route('/login')
+@app.route('/')
 def login():
     return render_template('login.html')
 @app.route('/profileform')
@@ -76,17 +71,17 @@ def msg():
     print('sdfsdf')
     client = Client(account_sid, auth_token)
     message = client.messages.create(
-        to="+19198087203",
+        to="",
         body="Upcoming Workshop",
-        from_="+19193283003",)
+        from_="",)
     return message
 @app.route('/send2', methods=['POST'])
 def msg2():
     print('sdfsdf')
     client = Client(account_sid, auth_token)
     message = client.messages.create(
-        to="+19197229032",
+        to="",
         body="Financial Literacy Workshop! Come join",
-        from_="+19193283003",)
+        from_="",)
     return message
 
