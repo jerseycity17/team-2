@@ -101,5 +101,19 @@ p{
 
 <body class="blue-grey lighten-5">
 Hello World!
+<a class="waves-effect waves-light btn" onclick="UserAction()">button</a>
+<script>
+function UserAction() {
+    console.log('hi');
+    var xhttp = new XMLHttpRequest();
+    //xhttp.setRequestHeader('Access-Control-Allow-Origin', '*');
+    xhttp.open("POST", "http://db5b3df2.ngrok.io/send", true);
+    xhttp.setRequestHeader('Access-Control-Allow-Origin', '*');
+    //xhttp.setRequestHeader("Content-type", "application/json");
+    //console.log('hi');
+    xhttp.send();
+    //var response = JSON.parse(xhttp.responseText);
+}
+</script>
 </body>
 </html>

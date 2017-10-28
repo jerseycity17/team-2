@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -9,24 +8,100 @@
   <link href="{{ url_for('static',filename='css/materialize.css')}}" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="{{ url_for('static',filename='css/home.css')}}" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Macondo|Lato|Indie+Flower|Shadows+Into+Light|Ruda|Source+Sans+Pro" rel="stylesheet">
-	<title></title>
+  <style>
+  #select1, #edit1, #select2, #edit2, #select3, #edit3, #select4, #edit4, #select5, #edit5, #select6, #edit6 {
+  	display: flex;
+  	justify-content: space-around;
+  }
+</style>
 </head>
 <body>
 
-<div class="row">
-      <div class="col s1">1</div>
-      <div class="col s1">2</div>
-      <div class="col s1">3</div>
-      <div class="col s1">4</div>
-      <div class="col s1">5</div>
-      <div class="col s1">6</div>
-      <div class="col s1">7</div>
-      <div class="col s1">8</div>
-      <div class="col s1">9</div>
-      <div class="col s1">10</div>
-      <div class="col s1">11</div>
-      <div class="col s1">12</div>
+    <!-- Title -->
+    <div class="card-panel #64b5f6 blue lighten-2">
+    	<h4 class="card-title">Welcome to FamilyConnect!</h4>
     </div>
 
+    <!-- Page Layout -->
+    <div class="row">
+
+	    <div class="col s3 m4 l4 #64b5f6 blue lighten-2">
+	        <div class="container">
+	        	<div class="row"> 
+	        		<h5 style="text-align:center" id="fam1">Family 1</h5>
+	        		<div class="col">
+	        			<a class="waves-effect #1565c0 blue darken-3 btn" id="select1">Select</a>
+	        		</div>
+	        		<div class="col">
+	        			<a class="waves-effect #1565c0 blue darken-3 btn" id="edit1">Edit</a>
+	        		</div>
+	        	</div>
+	        	<div class="row">
+	        		<h5 style="text-align:center" id="fam2">Family 2</h5>
+	        		<div class="col">
+	        			<a class="waves-effect #1565c0 blue darken-3 btn" id="select2">Select</a>
+	        		</div>
+	        		<div class="col">
+	        			<a class="waves-effect #1565c0 blue darken-3 btn" id="edit2">Edit</a>
+	        		</div>
+	        	</div>
+	        	<div class="row">
+	        		<h5 style="text-align:center" id="fam3">Family 3</h5>
+	        		<div class="col">
+	        			<a class="waves-effect #1565c0 blue darken-3 btn" id="select3">Select</a>
+	        		</div>
+	        		<div class="col">
+	        			<a class="waves-effect #1565c0 blue darken-3 btn" id="edit3">Edit</a>
+	        		</div>
+	        	</div>
+	        	<div class="row">
+	        		<h5 style="text-align:center" id="fam4">Family 4</h5>
+	        		<div class="col">
+	        			<a class="waves-effect #1565c0 blue darken-3 btn" id="select4">Select</a>
+	        		</div>
+	        		<div class="col">
+	        			<a class="waves-effect #1565c0 blue darken-3 btn" id="edit4">Edit</a>
+	        		</div>
+	        	</div>
+	        	<div class="row">
+	        		<h5 style="text-align:center" id="fam5">Family 5</h5>
+	        		<div class="col">
+	        			<a class="waves-effect #1565c0 blue darken-3 btn" id="select5">Select</a>
+	        		</div>
+	        		<div class="col">
+	        			<a class="waves-effect #1565c0 blue darken-3 btn" id="edit5">Edit</a>
+	        		</div>
+	        	</div>
+	        	<div class="row">
+	        		<h5 style="text-align:center" id="fam6">Family 6</h5>
+	        		<div class="col">
+	        			<a class="waves-effect #1565c0 blue darken-3 btn" id="select6">Select</a>
+	        		</div>
+	        		<div class="col">
+	        			<a class="waves-effect #1565c0 blue darken-3 btn" id="edit6">Edit</a>
+	        		</div>
+	        	</div>
+	        </div>
+	    </div>
+
+      <div class="col s9 m8 l7" id="div1">
+       
+       <iframe src="{{ url_for('profiledisplay') }}" height="650" width="800" style="border:none;"></iframe>
+
+      </div>
+
+    </div>
+
+<!-- Javascript -->
+<script>
+ function clicked() {
+    document.getElementById("first").innerHTML = "changed.";
+}
+function hello() {
+	alert("You haven't talked to Family 1 in a while! Send them a message!")
+}
+setTimeout(hello(), 10000)
+</script>
 </body>
 </html>
+
