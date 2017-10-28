@@ -1,6 +1,6 @@
 from flask import json,Flask,render_template,request,jsonify
 from twilio.twiml.messaging_response import MessagingResponse, Message
-import test
+import dbfunctions
 import sqlite3
 #from twilio.rest import Client
 #from twilio import twiml
@@ -48,9 +48,4 @@ def text():
     response.message('hi, aaron')
     print('hi')
     return str(response)
-
-@app.route('/send_data' methods = ['POST'])
-def send_data():
-    projectpath=request.form['projectFilepath']
-    conn = test.create_connection('database.db')
 
