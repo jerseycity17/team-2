@@ -8,42 +8,86 @@
   <link href="{{ url_for('static',filename='css/materialize.css')}}" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="{{ url_for('static',filename='css/home.css')}}" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Macondo|Lato|Indie+Flower|Shadows+Into+Light|Ruda|Source+Sans+Pro" rel="stylesheet">
-	<title></title>
+  <style>
+  #select1, #edit1, #select2, #edit2, #select3, #edit3, #select4, #edit4, #select5, #edit5, #select6, #edit6 {
+  	display: flex;
+  	justify-content: space-around;
+  }
+</style>
 </head>
 <body>
 
     <!-- Title -->
-    <div class="card-panel teal lighten-2">This is a card panel with a teal lighten-2 class</div>
+    <div class="card-panel #64b5f6 blue lighten-2">
+    	<h4 class="card-title">Welcome to FamilyConnect!</h4>
+    </div>
 
     <!-- Page Layout -->
     <div class="row">
 
-	    <div class="col s3 m4 l3 teal lighten-2">
+	    <div class="col s3 m4 l4 #64b5f6 blue lighten-2">
 	        <div class="container">
 	        	<div class="row"> 
-	        		<p id="first">Family 1</p>
-	        		<a class="waves-effect waves-light btn" onclick="clicked()">Edit</a>
+	        		<h5 style="text-align:center" id="fam1">Family 1</h5>
+	        		<div class="col">
+	        			<a class="waves-effect #1565c0 blue darken-3 btn" id="select1">Select</a>
+	        		</div>
+	        		<div class="col">
+	        			<a class="waves-effect #1565c0 blue darken-3 btn" id="edit1">Edit</a>
+	        		</div>
 	        	</div>
 	        	<div class="row">
-	        		<p>Family 2</p>
-	        		<a class="waves-effect waves-light btn" id="taco">Edit</a>
+	        		<h5 style="text-align:center" id="fam2">Family 2</h5>
+	        		<div class="col">
+	        			<a class="waves-effect #1565c0 blue darken-3 btn" id="select2">Select</a>
+	        		</div>
+	        		<div class="col">
+	        			<a class="waves-effect #1565c0 blue darken-3 btn" id="edit2">Edit</a>
+	        		</div>
+	        	</div>
+	        	<div class="row">
+	        		<h5 style="text-align:center" id="fam3">Family 3</h5>
+	        		<div class="col">
+	        			<a class="waves-effect #1565c0 blue darken-3 btn" id="select3">Select</a>
+	        		</div>
+	        		<div class="col">
+	        			<a class="waves-effect #1565c0 blue darken-3 btn" id="edit3">Edit</a>
+	        		</div>
+	        	</div>
+	        	<div class="row">
+	        		<h5 style="text-align:center" id="fam4">Family 4</h5>
+	        		<div class="col">
+	        			<a class="waves-effect #1565c0 blue darken-3 btn" id="select4">Select</a>
+	        		</div>
+	        		<div class="col">
+	        			<a class="waves-effect #1565c0 blue darken-3 btn" id="edit4">Edit</a>
+	        		</div>
+	        	</div>
+	        	<div class="row">
+	        		<h5 style="text-align:center" id="fam5">Family 5</h5>
+	        		<div class="col">
+	        			<a class="waves-effect #1565c0 blue darken-3 btn" id="select5">Select</a>
+	        		</div>
+	        		<div class="col">
+	        			<a class="waves-effect #1565c0 blue darken-3 btn" id="edit5">Edit</a>
+	        		</div>
+	        	</div>
+	        	<div class="row">
+	        		<h5 style="text-align:center" id="fam6">Family 6</h5>
+	        		<div class="col">
+	        			<a class="waves-effect #1565c0 blue darken-3 btn" id="select6">Select</a>
+	        		</div>
+	        		<div class="col">
+	        			<a class="waves-effect #1565c0 blue darken-3 btn" id="edit6">Edit</a>
+	        		</div>
 	        	</div>
 	        </div>
 	    </div>
 
-      <div class="col s9 m8 l9 #bdbdbd grey">
-        <div class="container">
-        	<p>Family Info</p>
-        	<p>Family Info</p>
-        	<p>Family Info</p>
-        	<p>Family Info</p>
-        	<p>Family Info</p>
-        	<p>Family Info</p>
-        	<p>Family Info</p>
-        	<p>Family Info</p>
-        	<p>Family Info</p>
-        	<p>Family Info</p>
-        </div>
+      <div class="col s9 m8 l7" id="div1">
+       
+       <iframe src="{{ url_for('profiledisplay') }}" height="650" width="800" style="border:none;"></iframe>
+
       </div>
 
     </div>
