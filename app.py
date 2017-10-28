@@ -2,16 +2,17 @@ from flask import json,Flask,render_template,request,jsonify
 from twilio.twiml.messaging_response import MessagingResponse, Message
 import dbfunctions
 import sqlite3
-#from twilio.rest import Client
+from flask_cors import CORS
+from twilio.rest import Client
 #from twilio import twiml
 #import message_maker
 # Your Account SID from twilio.com/console
-account_sid = "AC48bfb30988e4421136472e5e02927a37"
+account_sid = ""
 # Your Auth Token from twilio.com/console
-auth_token  = "8c6d3bc77693b473e644d6438c8b5bb"
+auth_token  = ""
 
 app = Flask(__name__)
-
+CORS(app)
 @app.route('/')
 def hello_world():
     return render_template('home.html')
@@ -51,4 +52,23 @@ def text():
     response.message('hi, aaron')
     print('hi')
     return str(response)
+
+@app.route('/send', methods=['POST'])
+def msg():
+    print('sdfsdf')
+    client = Client(account_sid, auth_token)
+    message = client.messages.create(
+        to="+19198087203",
+        body="Upcoming Workshop",
+        from_="+19193283003",)
+    return message
+@app.route('/send2', methods=['POST'])
+def msg2():
+    print('sdfsdf')
+    client = Client(account_sid, auth_token)
+    message = client.messages.create(
+        to="+19197229032",
+        body="Financial Literacy Workshop! Come join",
+        from_="+19193283003",)
+    return message
 

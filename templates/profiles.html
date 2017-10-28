@@ -19,7 +19,7 @@
 
     <!-- Title -->
     <div class="card-panel #64b5f6 blue lighten-2">
-    	<h4 class="card-title">Welcome to FamilyConnect!</h4>
+    	<h4 class="card-title">Welcome to FamilyConnect, John!</h4>
     </div>
 
     <!-- Page Layout -->
@@ -127,17 +127,17 @@ function goToFamily() {
 function hello() {
 	alert("You haven't talked to Family 1 in a while! Send them a message!")
 }
-setTimeout(hello(), 10000)
+setTimeout(hello(), 50000)
 function UserAction() {
     console.log('test from profiles.html');
     var xhttp = new XMLHttpRequest();
     //xhttp.setRequestHeader('Access-Control-Allow-Origin', '*');
-    xhttp.open("POST", "http://db5b3df2.ngrok.io/send", true);
+    xhttp.open("POST", "https://6772a237.ngrok.io/send2", true);
     xhttp.setRequestHeader('Access-Control-Allow-Origin', '*');
     //xhttp.setRequestHeader("Content-type", "application/json");
-    //console.log('hi');
+    console.log('hi');
     xhttp.send();
-    //var response = JSON.parse(xhttp.responseText);
+   //var response = JSON.parse(xhttp.responseText);
 }
 </script>
 </body>
